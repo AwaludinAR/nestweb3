@@ -1,0 +1,31 @@
+{
+  "name": "nest-web3",
+  "version": "1.0.0",
+  "description": "Web3js for NestJS",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.build.json",
+    "test:server": "nodemon"
+  },
+  "author": "Awaludin AR <me@awaludin.dev>",
+  "license": "MIT",
+  "peerDependencies": {
+    "@nestjs/common": "^8.0.0 || ^9.0.0 || ^10.0.0",
+    "@nestjs/core": "^8.0.0 || ^9.0.0 || ^10.0.0",
+    "web3": "^4.6.0"
+  },
+  "devDependencies": {
+    "@nestjs/common": "^10.3.5",
+    "@nestjs/core": "^10.3.5",
+    "@nestjs/platform-express": "^10.3.5",
+    "isomorphic-ws": "^5.0.0",
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.3",
+    "web3-types": "^1.5.0",
+    "web3-utils": "^4.2.1"
+  },
+  "dependencies": {
+    "rxjs": "^7.8.1"
+  }
+}
