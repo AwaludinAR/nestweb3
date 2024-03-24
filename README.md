@@ -7,7 +7,7 @@
 ## Installation
 
 ```bash
-npm i --save https://github.com/awaludinar/nest-web3
+npm i --save https://github.com/awaludinar/nestweb3
 ```
 
 ## NOTE
