@@ -14,18 +14,25 @@
     "nestweb3"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/awaludinar/nestweb3.git"
+  },
   "peerDependencies": {
     "@nestjs/common": "^8.0.0 || ^9.0.0 || ^10.0.0",
     "@nestjs/core": "^8.0.0 || ^9.0.0 || ^10.0.0",
-    "web3": "^4.6.0",
-    "rxjs": "^7.8.1"
+    "rxjs": "^7.8.1",
+    "web3": "^4.6.0"
   },
   "devDependencies": {
     "@nestjs/common": "^10.3.5",
     "@nestjs/core": "^10.3.5",
     "@nestjs/platform-express": "^10.3.5",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
     "isomorphic-ws": "^5.0.0",
     "nodemon": "^3.1.0",
+    "semantic-release": "^23.0.6",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.3",
     "web3-types": "^1.5.0",
