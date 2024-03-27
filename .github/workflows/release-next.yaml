@@ -7,7 +7,6 @@ on:
 
 jobs:
   build:
-    name: Build artifact
     uses: ./.github/workflows/build-artifact.yaml
 
   prepare:
@@ -22,6 +21,7 @@ jobs:
         with:
           name: dist
           path: dist
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Print Contents
         run: ls
