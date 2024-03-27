@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "rm -rf dist && tsc -p tsconfig.build.json",
+    "release": "release-it",
     "test:server": "nodemon"
   },
   "author": "Awaludin AR <me@awaludin.dev>",
