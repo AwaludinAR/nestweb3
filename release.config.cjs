@@ -4,9 +4,9 @@
 module.exports = {
   repositoryUrl: 'https://github.com/AwaludinAR/nestweb3.git',
   branches: [
-    { name: 'main' },
-    { name: 'action-test', channel: 'beta', prerelease: true },
-    { name: 'next', channel: 'next', prerelease: true },
+    'main',
+    'next',
+    { name: 'action-test', channel: 'act', prerelease: true },
   ],
   plugins: [
     '@semantic-release/commit-analyzer',
