@@ -1,5 +1,5 @@
 {
-  "name": "nestweb3",
+  "name": "@awaludinar/nestweb3",
   "description": "Web3.js module for NestJS",
   "main": "dist/index.js",
   "scripts": {
@@ -11,7 +11,8 @@
   "keywords": [
     "web3js",
     "nestjs",
-    "nestweb3"
+    "nestweb3",
+    "nestjs-eth"
   ],
   "license": "MIT",
   "repository": {
