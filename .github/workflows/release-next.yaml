@@ -6,9 +6,6 @@ on:
       - action-test
 
 jobs:
-  build:
-    uses: ./.github/workflows/build-artifact.yaml
-
   prepare:
     runs-on: ubuntu-latest
     steps:
@@ -16,12 +13,39 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Download Artifact
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist
+
+  release:
+    needs: prepare
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Download Artifacts
         uses: actions/download-artifact@v4
         with:
           name: dist
           path: dist
-          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Print Contents
         run: ls
