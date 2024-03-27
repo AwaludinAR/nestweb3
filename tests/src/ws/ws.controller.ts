@@ -5,7 +5,7 @@ import { WsService } from './ws.service';
 export class WsController {
   constructor(private wsService: WsService) {}
 
-  @Get('block_number:current')
+  @Get('current-block-number')
   getCurrentBlockNumber() {
     return this.wsService.getBlockNumber();
   }
