@@ -4,7 +4,8 @@
 module.exports = {
   repositoryUrl: 'https://github.com/AwaludinAR/nestweb3.git',
   branches: [
-    { nam: 'action-test' },
+    { name: 'main' },
+    { name: 'action-test', channel: 'beta', prerelease: true },
     { name: 'next', channel: 'next', prerelease: true },
   ],
   plugins: [
@@ -17,26 +18,12 @@ module.exports = {
         changelogTitle: '# Changelog',
       },
     ],
+    '@semantic-release/github',
     [
-      '@semantic-release/git',
+      '@semantic-release/npm',
       {
-        assets: ['CHANGELOG.md', 'package.json', 'package-lock.json'],
+        npmPublish: false,
       },
     ],
-    [
-      '@semantic-release/github',
-      {
-        assets: [
-          'dist/**/*.{js,d.ts}',
-          'CHANGELOG.md',
-          'LICENSE',
-          'README.md',
-          'package.json',
-          'package-lock.json',
-        ],
-        draftRelease: true,
-      },
-    ],
-    '@semantic-release/npm',
   ],
 };
