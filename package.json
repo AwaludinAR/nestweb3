@@ -32,6 +32,7 @@
     "@semantic-release/git": "^10.0.1",
     "isomorphic-ws": "^5.0.0",
     "nodemon": "^3.1.0",
+    "release-it": "^17.1.1",
     "semantic-release": "^23.0.6",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.3",
