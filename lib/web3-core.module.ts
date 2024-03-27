@@ -1,6 +1,5 @@
-import { DynamicModule, Global, Inject, Module } from '@nestjs/common';
-import { WEB3_CONNECTION_NAME, WEB3_MODULE_OPTIONS } from './web3.constants';
-import { ModuleRef } from '@nestjs/core';
+import { DynamicModule, Global, Logger, Module } from '@nestjs/common';
+import { WEB3_CONNECTION_NAME } from './web3.constants';
 import {
   HttpProvider,
   SupportedProviders,
@@ -14,10 +13,8 @@ import { defer, lastValueFrom } from 'rxjs';
 @Global()
 @Module({})
 export class Web3CoreModule {
-  constructor(
-    @Inject(WEB3_CONNECTION_NAME) private readonly connectionName: string,
-    private readonly moduleRef: ModuleRef,
-  ) {}
+  public static readonly logger = new Logger(Web3CoreModule.name);
+  constructor() {}
 
   static forRoot(
     clientUrl: string,
@@ -25,7 +22,6 @@ export class Web3CoreModule {
   ): DynamicModule {
     const { connectionName, connectionFactory, provider } = opts;
 
-    console.log('Web3 Name:', connectionName);
     const web3ConnectionFactory =
       connectionFactory || ((connection) => connection);
     const web3Provider = provider || { name: 'HTTP', providerOptions: {} };
