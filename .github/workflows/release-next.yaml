@@ -7,12 +7,16 @@ on:
 
 jobs:
   build:
+    name: Build artifact
+    uses: ./.github/workflows/build-artifact.yaml
+
+  prepare:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Build Artifact
-        uses: ./.github/workflows/build-artifact.yaml
+        with:
+          fetch-depth: 0
       - name: Download Artifact
         uses: actions/download-artifact@v4
         with:
