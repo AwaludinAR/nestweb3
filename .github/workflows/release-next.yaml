@@ -1,0 +1,19 @@
+name: Release Next Version
+
+on:
+  push:
+    branches:
+      - action-test
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./.github/workflows/build-artifact.yaml
+      - name: Download Artifact
+        uses: actions/download-artifact@v4
+        with:
+          path: dist
+
+      - name: Print Contents
+        run: ls

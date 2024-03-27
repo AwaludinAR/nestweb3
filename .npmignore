@@ -12,9 +12,4 @@ tsconfig.json
 tsconfig.build.json
 .prettierrc
 .prettierrc
-.commitlintrc.json
-docker-compose.yml
-.husky/
 .github/
-.circleci/
-renovate.json
