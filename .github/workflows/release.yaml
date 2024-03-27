@@ -3,6 +3,7 @@ name: Release Next Version
 on:
   push:
     branches:
+      - main
       - beta
 
 jobs:
@@ -64,7 +65,5 @@ jobs:
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx semantic-release --dry-run
-
-      - name: Print Contents
-        run: ls
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npx semantic-release
