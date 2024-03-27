@@ -1,6 +1,5 @@
 {
   "name": "nestweb3",
-  "version": "1.0.0",
   "description": "Web3.js module for NestJS",
   "main": "dist/index.js",
   "scripts": {

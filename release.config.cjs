@@ -3,11 +3,7 @@
  */
 module.exports = {
   repositoryUrl: 'https://github.com/AwaludinAR/nestweb3.git',
-  branches: [
-    'main',
-    'next',
-    { name: 'action-test', channel: 'act', prerelease: true },
-  ],
+  branches: ['main', { name: 'beta', channel: 'beta', prerelease: true }],
   plugins: [
     '@semantic-release/commit-analyzer',
     '@semantic-release/release-notes-generator',
@@ -22,7 +18,7 @@ module.exports = {
     [
       '@semantic-release/npm',
       {
-        npmPublish: false,
+        npmPublish: true,
       },
     ],
   ],
