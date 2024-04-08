@@ -4,7 +4,7 @@ import Web3 from 'web3';
 
 @Injectable()
 export class WsService {
-  constructor(@InjectWeb3('Websocket1') private web3: Web3) {}
+  constructor(@InjectWeb3('WS_ASYNC') private web3: Web3) {}
 
   getBlockNumber() {
     return this.web3.eth.getBlockNumber();
