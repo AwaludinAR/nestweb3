@@ -61,7 +61,7 @@ import { Web3Module } from '@awaludinar/nestweb3';
     }),
     Web3Module.forRoot('wss://client-rpc-url.tld', {
       connectionName: 'RPC2',
-      provider: { name: 'WS' /* or WS */ },
+      provider: { name: 'WS' /* or HTTP */ },
     }),
   ],
 })
